@@ -1,4 +1,4 @@
-### Peer Tutoring Materials
+## Peer Tutoring Materials
 
 **© 2021-22 Discovery Physics Club**
 
