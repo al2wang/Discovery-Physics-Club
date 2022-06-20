@@ -279,6 +279,120 @@
 <h1>Discovery Physics Club</h1>
 </div>
 
+<--INSERTION/-->
+	
+<div class = "w3-panel w3-round-large w3-light-blue"><b>预备知识</b>　欧拉—拉格朗日方程<span class = "icon"><a href = "https://wuli.wiki/online/Lagrng.html" target = "_blank"><i class = "fa fa-external-link"></i></a></span></div>
+<h2 class = "w3-text-indigo"><b>1. 拉格朗日方程的广义力拓展</b></h2>
+<p>　　
+在之前的讨论中，所有的系统外力都可以包含进拉格朗日量 $L = T-V$ 的势能项 $V$ 中．和之前一样，为了书写方便式中 $q$ 代表 $q_1, \dots, q_N$，$\dot q$ 也同理．本文仍然假设 $V$ 不显含 $\dot q$，即并非广义势能<span class = "icon"><a href = "https://wuli.wiki/online/EMLagP.html" target = "_blank"><i class = "fa fa-external-link"></i></a></span>．我们可以先把 $V$ 看成所有质点位置 $ \boldsymbol{\mathbf{r}} _j$ 和 $t$ 的函数，这样势能 $V$ 对每个质点产生的力就是
+<span id = "LagEqQ_eq4"></span><div class="eq"><div class = "w3-cell" style = "width:865px">
+\begin{equation}
+ \boldsymbol{\mathbf{F}} _j^{(V)} = -  \boldsymbol\nabla _j V( \boldsymbol{\mathbf{r}} _1, \boldsymbol{\mathbf{r}} _2,\dots,t) = - \frac{\partial V}{\partial x_j}  \hat{\boldsymbol{\mathbf{x}}}  -  \frac{\partial V}{\partial y_j}  \hat{\boldsymbol{\mathbf{y}}}  -  \frac{\partial V}{\partial z_j}   \hat{\boldsymbol{\mathbf{z}}} 
+\end{equation}
+</div></div>
+然后再把每个 $ \boldsymbol{\mathbf{r}} _j$ 看成广义坐标 $q$ 和时间 $t$ 的函数，就有 $V = V(q,t)$．
+</p>
+<p>　　
+这些力一般来说是保守力（如重力，弹簧弹力等），然而许多情况中还可能出现种种非保守力，例如摩擦力等，较难用势能描述．这时引入<b>广义力（generalized force）</b>的概念会更方便．每个广义坐标 $q_i$ 对应一个广义力，定义为（$i=1,\dots,N$，下同）
+<span id = "LagEqQ_eq3"></span><div class="eq"><div class = "w3-cell" style = "width:865px">
+\begin{equation}
+Q_i = \sum_j  \boldsymbol{\mathbf{F}} _j^{(a)}  \boldsymbol\cdot   \frac{\partial  \boldsymbol{\mathbf{r}} _j}{\partial q_i} 
+\end{equation}
+</div></div>
+其中 $ \boldsymbol{\mathbf{F}} _j^{(a)}$ 是作用点为 $ \boldsymbol{\mathbf{r}} _j$ 的主动力（即非约束力）<sup><a href = "https://wuli.wiki/online/LagEqQ.html#note1" id = "ret1"><b>1</b></a></sup>．
+</p>
+<p>　　
+若除了势能项 $V$ 产生的主动力（<a href = "https://wuli.wiki/online/LagEqQ.html#LagEqQ_eq4" >式 1 </a>）外还存在其他主动力 $ \boldsymbol{\mathbf{F}} _j^{(e)}$（上标 $e$ 表示 extra），那么拉格朗日方程（<a href = "https://wuli.wiki/online/Lagrng.html#Lagrng_eq1" target = "_blank">式 1 </a><span class = "icon"><a href = "https://wuli.wiki/online/Lagrng.html" target = "_blank"><i class = "fa fa-external-link"></i></a></span>）可以拓展为
+<span id = "LagEqQ_eq1"></span><div class="eq"><div class = "w3-cell" style = "width:865px">
+\begin{equation}
+ \frac{\mathrm{d}}{\mathrm{d}{t}}   \frac{\partial L}{\partial \dot q_i}  =  \frac{\partial L}{\partial q_i}  + Q_i^{(e)}
+\end{equation}
+</div></div>
+其中 $Q_i^{(e)}$ 的定义是把<a href = "https://wuli.wiki/online/LagEqQ.html#LagEqQ_eq3" >式 2 </a> 中的 $ \boldsymbol{\mathbf{F}} _j$ 替换为 $ \boldsymbol{\mathbf{F}} _j^{(e)}$．上式的证明见 “拉格朗日方程的证明、达朗贝尔定理<span class = "icon"><a href = "https://wuli.wiki/online/dAlbt.html" target = "_blank"><i class = "fa fa-external-link"></i></a></span>”．
+</p>
+<p>　　
+在该证明过程中还会发现，<a href = "https://wuli.wiki/online/LagEqQ.html#LagEqQ_eq1" >式 3 </a> 中的 $ \partial L/\partial q_i  =  \partial T/\partial q_i  -  \partial V/\partial q_i $ 的最后一项同样符合广义力的定义
+<div class="eq"><div class = "w3-cell" style = "width:865px">
+\begin{equation}
+Q_i^{(V)} = - \frac{\partial V}{\partial q_i}  = \sum_j  \boldsymbol{\mathbf{F}} _j^{(V)}  \boldsymbol\cdot   \frac{\partial  \boldsymbol{\mathbf{r}} _j}{\partial q_i} 
+\end{equation}
+</div></div>
+那么如果令总广义力为
+<div class="eq"><div class = "w3-cell" style = "width:865px">
+\begin{equation}
+Q_i = Q_i^{(V)} + Q_i^{(e)}
+\end{equation}
+</div></div>
+那么拉格朗日方程<a href = "https://wuli.wiki/online/LagEqQ.html#LagEqQ_eq1" >式 3 </a> 也可以完全抛开势能项记为（假设 $V$ 不显含 $\dot q$）
+<span id = "LagEqQ_eq2"></span><div class="eq"><div class = "w3-cell" style = "width:865px">
+\begin{equation}
+ \frac{\mathrm{d}}{\mathrm{d}{t}}   \frac{\partial T}{\partial \dot q_i}  =  \frac{\partial T}{\partial q_i}  + Q_i
+\end{equation}
+</div></div>
+</p>
+<div class = "w3-panel w3-border-yellow w3-leftbar">
+ <h3 style="margin-top: 0; padding-top: 0;"><b>例 1</b>　受阻耦合弹簧振子</h3>
+<p>　　
+<a href = "https://wuli.wiki/online/Lagrng.html#Lagrng_ex2" target = "_blank">例 3 </a><span class = "icon"><a href = "https://wuli.wiki/online/Lagrng.html" target = "_blank"><i class = "fa fa-external-link"></i></a></span> 中，若两个滑块受到于速度相反，大小与速度平方成正比的摩擦力，比例系数为 $\alpha$，求运动方程．
+</p>
+<p>　　
+注意摩擦力是取决于运动方向的．令 $\dot x_i \geqslant 0$ 时 $s_i = 1$，$\dot x_i < 0$ 时 $s_i = -1$，那么使用<a href = "https://wuli.wiki/online/LagEqQ.html#LagEqQ_eq3" >式 2 </a>，广义力为
+<div class="eq"><div class = "w3-cell" style = "width:825px">
+\begin{equation}
+\begin{aligned}
+Q_x &= F_1  \frac{\partial x_1}{\partial x}  + F_2  \frac{\partial x_2}{\partial x}  = (-\alpha s_1\dot x_1^2) \cdot \frac{1}{2} + (-\alpha s_2\dot x_2^2) \cdot \frac{-1}{2}\\
+&= \frac{\alpha}{2}(s_1\dot x_1^2 - s_2 \dot x_2^2)
+\end{aligned}
+\end{equation}
+</div></div>
+同理得
+<div class="eq"><div class = "w3-cell" style = "width:825px">
+\begin{equation}
+Q_X = -\alpha(s_1 \dot x_1^2 + s_2\dot x_2^2)
+\end{equation}
+</div></div>
+现在 $s_1,s_2,\dot x_1,\dot x_2$ 可以进一步写成 $\dot x, \dot X$ 的函数，具体略．求得含摩擦力的运动方程为
+<div class="eq"><div class = "w3-cell" style = "width:825px">
+\begin{equation}
+m\ddot x =  - 3kx + 2Q_x~, \qquad
+m\ddot X =  - kX + \frac{Q_X}{2}
+\end{equation}
+</div></div>
+</p>
+</div>
+
+<span id = "LagEqQ_sub1"></span><h2 class = "w3-text-indigo"><b>2. 广义力做功</b></h2>
+<p>　　
+若干力 $ \boldsymbol{\mathbf{F}} _j$ 对系统的功率为
+<span id = "LagEqQ_eq5"></span><div class="eq"><div class = "w3-cell" style = "width:865px">
+\begin{equation}
+\begin{aligned}
+P &= \sum_j  \boldsymbol{\mathbf{F}} _j  \boldsymbol\cdot  \dot{ \boldsymbol{\mathbf{r}} }_j
+= \sum_{i,j}  \boldsymbol{\mathbf{F}} _j  \boldsymbol\cdot   \frac{\partial  \boldsymbol{\mathbf{r}} _j}{\partial q_i} \dot q_i + \sum_j  \boldsymbol{\mathbf{F}} _j  \boldsymbol\cdot   \frac{\partial  \boldsymbol{\mathbf{r}} _j}{\partial t} \\
+&= \sum_i Q_i \dot q_i + \sum_j  \boldsymbol{\mathbf{F}} _j  \boldsymbol\cdot   \frac{\partial  \boldsymbol{\mathbf{r}} _j}{\partial t} 
+\end{aligned}
+\end{equation}
+</div></div>
+所以<b>若系统没有不稳定约束</b>，即最后一项 $ \partial  \boldsymbol{\mathbf{r}} _j/\partial t  = 0$，则每个广义力的功率为
+<div class="eq"><div class = "w3-cell" style = "width:865px">
+\begin{equation}
+P_i = Q_i \dot q_i
+\end{equation}
+</div></div>
+一段时间内的做功为
+<div class="eq"><div class = "w3-cell" style = "width:865px">
+\begin{equation}
+W_i = \int_{t_1}^{t_2} Q_i \dot q_i  \,\mathrm{d}{t} 
+\end{equation}
+</div></div>
+总功率和总功就是对所有 $P_i$ 和 $W_i$ 求和．
+</p>
+<p>　　
+在学了虚功<span class = "icon"><a href = "https://wuli.wiki/online/VirWrk.html" target = "_blank"><i class = "fa fa-external-link"></i></a></span>后会看到，广义力对广义坐标积分等于虚功（<a href = "https://wuli.wiki/online/VirWrk.html#VirWrk_sub1" target = "_blank">子节 1 </a><span class = "icon"><a href = "https://wuli.wiki/online/VirWrk.html" target = "_blank"><i class = "fa fa-external-link"></i></a></span>）．
+</p>
+
+<--END OF INSERTION-->
+	
 <div class="w3-container">
 <p style="text-align:right; margin-top:0px; margin-bottom:0px; margin-right:0px; font-size:18px;">
    <a href="https://wuli.wiki/online/EMRef.html" title="电磁场的参考系变换"><i class="fa fa-arrow-circle-left" style="color:rgb(33,150,243)"></i></a>&nbsp;
