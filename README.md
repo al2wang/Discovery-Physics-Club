@@ -8,6 +8,10 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
+\begin{equation}
+r_s \equiv \left(\frac{E_R}{E_I}\right)_s = \frac{n_1\cos{\theta_i} - n_2\cos\theta_t}{n_1\cos\theta_i + n_2\cos\theta_t}
+\end{equation}
+
 ```markdown
 Syntax highlighted code block
 
