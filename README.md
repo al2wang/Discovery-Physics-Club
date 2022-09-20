@@ -15,4 +15,6 @@ To see a full version of the positions and students in charge of them accordingl
 
 2. Our club's official WeChat page:
 
-3. Or contact through email: `lightever131@gmail.com`
+3. Club fair
+
+4. Or contact through email: `lightever131@gmail.com`
