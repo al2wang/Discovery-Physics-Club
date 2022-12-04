@@ -2,6 +2,9 @@
 
 [to be edited]!!!
 
+This is the repository for the tutorials and notes of the Discovery Physics Club hosted by Guangyuan Wang, Xuping Zhuang, Yuxuan Wang, and Shengping Cheng at Shenzhen Middle School. If you are looking for the `[official website]()` or `[WeChat page]()` of the club (for notes packets, etc), please click the links above.
+
+The docs folder contains most of the files that are publicly visible on the homepage. The source folder contains the markdown source files used to generate these PDF's. Some of them were generated in Google Docs instead of Markdown, and are not included here.
 
 
 
